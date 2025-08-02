@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Your Minecraft Server</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #37474F;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAACp0RVh0U29mdHdhcmUAYWRvYmUgaW1hZ2VyZWFkeQCUzAYAAAAVdEVYdFRpdGxlAE1pbmVjcmFmdCBGbG9vcsgV26MAAAIYSURBVGhD7ZlNSsNAFIb/gw4deCgIehej4MGL4EN4LhQ8iB78QB7Fiyf9A0UEvfgEBRsKgnjQYxKFxNZsM2lM5jPSZJdNu9l9/5tN2jT5U1dXV+9BwD8I2A+B/iBgCgL2Q8B+CNgPgf4gYApC9kPAnwjYDwH/IWAhBPxZgP0Q8B8C/kPAAggYAgF/FmABBPxZwAAIGAGBf/f39/d3u91ul8vlcrlcEcbY19fX+Xw+nU43Gg0O53M+n3c4HGz7A4FAoFarpVLJ7u6u3+9nWRbLspzP5zAMQ9M0pmn6/f62trbC4fCwsLCwsLCwsLCwsLCwsLAwNDQ0NjY2Njb29/e3t7dD0zSmaZIkx3Ecx4Zh2NnZ6XA4vF4vTdOaZpFk8/b29vLykud5ruu6ruv3+3d2dmpatizLPM9RFMXzPC/L0jRNURRJkiRJGIbX65XneY7j4vjFYrFarS6Xy+VyuVwul0qlUqvVyuVyubm5ubq6urq6+vT09PX19ff3t7e3t7e3NzY2NjY2hoaGwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCws.png');
+        }
+        .ip-button {
+            background-color: #2E7D32;
+            border-bottom: 4px solid #1B5E20;
+            transition: transform 0.1s ease, background-color 0.1s ease;
+        }
+        .ip-button:active {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <header class="h-screen flex flex-col justify-center items-center text-center p-4">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4" style="text-shadow: 3px 3px 0px #000;">
+            Your Minecraft Server
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 max-w-2xl mb-8" style="text-shadow: 2px 2px 0px #000;">
+            Your new survival adventure starts here. Explore, build, and survive together.
+        </p>
+        <div class="bg-gray-900/50 p-4 rounded-md flex items-center space-x-4">
+            <p id="server-ip" class="text-xl md:text-2xl text-yellow-300">play.yourserver.com</p>
+            <button onclick="copyIp()" class="ip-button text-white font-bold px-6 py-3 rounded-md text-lg">
+                Copy IP
+            </button>
+        </div>
+        <p id="copy-success" class="text-green-400 mt-4 opacity-0 transition-opacity">IP Address Copied!</p>
+    </header>
+
+    <main class="container mx-auto p-8 space-y-20">
+        
+        <section class="fade-in-section max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">The Server</h2>
+            <p class="text-gray-300 text-lg leading-relaxed">
+                "Your Minecraft Server" is a semi-vanilla Survival server, enhanced with quality-of-life plugins that enrich the experience without ruining the core game. We focus on community, building, and exploration.
+            </p>
+        </section>
+
+        <section class="fade-in-section">
+            <h2 class="text-4xl font-bold text-center mb-8">Our Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-stone-700/50 p-6 rounded-md border-2 border-stone-600">
+                    <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Balanced Economy</h3>
+                    <p class="text-gray-300">A player-driven trading system, with shops to sell your resources and buy unique items.</p>
+                </div>
+                <div class="bg-stone-700/50 p-6 rounded-md border-2 border-stone-600">
+                    <h3 class="text-2xl font-semibold text-green-400 mb-2">Claim Protection</h3>
+                    <p class="text-gray-300">Protect your builds and chests from grief. Your base is safe with us.</p>
+                </div>
+                <div class="bg-stone-700/50 p-6 rounded-md border-2 border-stone-600">
+                    <h3 class="text-2xl font-semibold text-blue-400 mb-2">Regular Events</h3>
+                    <p class="text-gray-300">Participate in building events, treasure hunts, and boss fights organized by the staff.</p>
+                </div>
+            </div>
+        </section>
+
+       <section class="fade-in-section">
+            <h2 class="text-4xl font-bold text-center mb-8">Server Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+                 
+                 <img src="base.jpg" alt="Base Screenshot" class="aspect-video object-cover rounded-md">
+
+                 <img src="city.jpg" alt="Town Screenshot" class="aspect-video object-cover rounded-md">
+
+                 <img src="event.jpg" alt="Event Screenshot" class="aspect-video object-cover rounded-md">
+
+                 <img src="players.jpg" alt="Player Screenshot" class="aspect-video object-cover rounded-md">
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-8 text-gray-400 mt-16">
+        <p>&copy; 2025 Your Minecraft Server.</p>
+    </footer>
+
+    <script>
+        function copyIp() {
+            const ip = document.getElementById('server-ip').innerText;
+            navigator.clipboard.writeText(ip);
+            
+            const successMessage = document.getElementById('copy-success');
+            successMessage.style.opacity = '1';
+            setTimeout(() => {
+                successMessage.style.opacity = '0';
+            }, 2000);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
